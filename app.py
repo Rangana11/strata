@@ -7,6 +7,10 @@ app = Flask(__name__)
 def home():
     return "Strata application is running!"
 
+@app.route("/health")
+def health():
+    return {"status": "healthy"}
+
 
 if __name__ == "__main__":
-    app.run()
+    app.run()   
