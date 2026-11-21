@@ -1,6 +1,12 @@
-def main():
-    print("Strata application is running!")
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return "Strata application is running!"
 
 
 if __name__ == "__main__":
-    main()
+    app.run()
